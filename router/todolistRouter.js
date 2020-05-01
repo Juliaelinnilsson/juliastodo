@@ -33,7 +33,7 @@ router.post("/createtodo", async (req, res) => {
 
 router.get("/delete/:id", async (req, res) => {
     await Todo.deleteOne({ _id: req.params.id });
-    res.redirect("/todolist");
+    res.redirect("/");
 })
 
 router.get("/update/:id", async (req, res) => {
@@ -45,7 +45,7 @@ router.post("/update/:id", async (req, res) => {
         {
             $set: { todo: req.body.todo, date: req.body.date }
         })
-    res.redirect("/todolist");
+    res.redirect("/");
 })
 
 module.exports = router;
