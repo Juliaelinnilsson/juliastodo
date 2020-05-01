@@ -25,7 +25,7 @@ router.post("/createtodo", async (req, res) => {
             res.send(error.message)
         }
         else {
-            res.redirect("/todolist")
+            res.redirect("/")
 
         }
     });
